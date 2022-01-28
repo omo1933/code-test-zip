@@ -8,8 +8,29 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
-	<script src="script.js"></script>
-</body>
+	<body>
+		<header style="text-align: center;"><h1>Zip Code</h1></header>
+		<div style="text-align: center"><h2 id="statement">Fill out the form below to allocate an address:</h2></div>
+		<form action="#" class="form fancy-form">
+			<fieldset>
+				<legend>Allocate ZipCode</legend>
+				<br/>
+				<div>
+					<div id="zipbox" class="control-group">
+						<label for="zipCode">Zip</label>
+						<input id="zipCode" type="text" class='' pattern="[0-9]*" name="zipCode"  placeholder="Type your ZIP code"/>
+					</div>	
+				</div>
+				<div>
+					<button class='btn btn-success btn-large' onclick='allocate()'>Submit</a>
+				</div>
+			</fieldset>
+		</form>	
+	  </body>
+	  <script src="script.js"></script>
+	  <script>
+		!function(o){console.old=console.log,console.log=function(){var n,e,t="";for(e=0;e<arguments.length;e++)t+='<span class="log-'+typeof(n=arguments[e])+'">',"object"==typeof n&&"object"==typeof JSON&&"function"==typeof JSON.stringify?t+=JSON.stringify(n):t+=n,t+="</span>&nbsp;";o.innerHTML+=t+"<br>",console.old.apply(void 0,arguments)}}
+		(document.body);
+	</script>
 </html>
 
