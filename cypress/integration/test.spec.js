@@ -65,7 +65,7 @@ context('zipCode Finder API', () => {
 
 context('zipCode Finder GUI', () => {
   it('visits UI and clicks Submit Button', () => {
-    cy.visit('cypress/index.html')
+    cy.visit('code-test-zip\index.html')
     cy.get('#zipCode').should('exist').type(address.postCode)
     cy.get('#values').should('have.text', address.postCode)
     cy.get('.btn').should('have.text', 'Submit').click()
