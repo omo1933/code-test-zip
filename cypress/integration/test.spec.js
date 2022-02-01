@@ -11,7 +11,7 @@ const address = {
   latitude: '32.7204'
 }
 
-context('zipCode Finder', () => {
+context('zipCode Finder API', () => {
   const allocate = (zipCode) => {
     fetch(`http://api.zippopotam.us/us/` + zipCode)
       .then(function (response) {
@@ -59,5 +59,21 @@ context('zipCode Finder', () => {
         address.latitude
       )
     })
+  })
+})
+
+
+context('zipCode Finder GUI', () => {
+  it('visits UI and clicks Submit Button', () => {
+    cy.visit('cypress/index.html')
+    cy.get('#zipCode').should('exist').type(address.postCode)
+    cy.get('#values').should('have.text', address.postCode)
+    cy.get('.btn').should('have.text', 'Submit').click()
+    cy.get('.log-object')
+      .should('exist')
+      .and(
+        'have.text',
+        '{"post code":"76010","country":"United States","country abbreviation":"US","places":[{"place name":"Arlington","longitude":"-97.0826","state":"Texas","state abbreviation":"TX","latitude":"32.7204"}]}'
+      )
   })
 })
