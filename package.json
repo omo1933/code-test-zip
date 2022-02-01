@@ -1,0 +1,26 @@
+{
+  "name": "code-test-zip",
+  "version": "1.0.0",
+  "description": "This is a challenge designed to test your ability to fetch data from an API, and manipulate the DOM with javascript.  [ZIP Codes](https://en.wikipedia.org/wiki/ZIP_Code) are used by the USPS as unique identifiers for geographic regions. [Zippopotomus](https://zippopotam.us) is a free API that accepts zip codes, and returns detailed information about the geographic region that zip code represents.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omo1933/code-test-zip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omo1933/code-test-zip/issues"
+  },
+  "homepage": "https://github.com/omo1933/code-test-zip#readme",
+  "dependencies": {
+    "cypress": "^9.4.1"
+  },
+  "devDependencies": {
+    "cypress-jest-adapter": "^0.1.1",
+    "jest": "^27.4.7"
+  }
+}
