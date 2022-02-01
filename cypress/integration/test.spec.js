@@ -5,10 +5,10 @@ const address = {
   country: "United States",
   countryAbbr: "US",
   placeName: "Arlington",
-longitude: "-97.0826",
-state: "Texas",
-stateAbbr: "TX",
-latitude: "32.7204"
+  longitude: "-97.0826",
+  state: "Texas",
+  stateAbbr: "TX",
+  latitude: "32.7204",
 };
 
 context("zipCode Finder", () => {
@@ -38,14 +38,18 @@ context("zipCode Finder", () => {
       expect(interception.response.statusCode).to.eq(200);
       expect(interception.response.body["post code"]).to.eq(address.postCode);
       expect(interception.response.body["country"]).to.eq(address.country);
-      expect(interception.response.body["country abbreviation"]).to.eq(address.countryAbbr);
+      expect(interception.response.body["country abbreviation"]).to.eq(
+        address.countryAbbr
+      );
       expect(interception.response.body["places"][0]["place name"]).to.eq(
         address.placeName
       );
       expect(interception.response.body["places"][0]["longitude"]).to.eq(
         address.longitude
       );
-      expect(interception.response.body["places"][0]["state"]).to.eq(address.state);
+      expect(interception.response.body["places"][0]["state"]).to.eq(
+        address.state
+      );
       expect(
         interception.response.body["places"][0]["state abbreviation"]
       ).to.eq(address.stateAbbr);
